@@ -2,8 +2,6 @@
 #include <stdbool.h>
 #include "my_mat.h"
 
-int mat[10][10];
-
 int min(int a, int b){
     if(a < b){
         return a;
