@@ -17,13 +17,13 @@ int main(){
             scanf("%d" "%d", &i, &j);
             bool x = B(mat,i,j);
             printf("%s", x);
-            printf('\n');
+            printf("\n");
         }
         if(func == 'C'){
             scanf("%d" "%d", &i, &j);
             int x = C(mat,i,j);
             printf("%d", x);
-            printf('\n');
+            printf("\n");
         }
     }
 }
