@@ -1,8 +1,6 @@
 #include<stdio.h>
-#include<math.h>
 #include <stdbool.h>
 #include "my_mat.h"
-
 
 int mat[10][10];
 

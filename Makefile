@@ -1,29 +1,21 @@
-CC=gcc
-AR=ar
-OBJECTS_MAIN=main.o
-OBJECTS_LIB_LOOP = my_mat.o
+CC = gcc
+AR = ar
+OBJECTS_MAIN = main.o
+OBJECTS_LIB = my_mat.o
 FLAGS= -Wall -g
-EXE = loops connections 
 
-#target commands
-all: $(EXE)
-
-connections: $(OBJECTS_MAIN) libclassloop.a 
-	$(CC) $(FLAGS) -o connections $(OBJECTS_MAIN) libclassloop.a -lm
-
-loops: libclassloop.a
-
-#static libs
-libclassloop.a: $(OBJECTS_LIB_LOOP)
-	$(AR) -rcs libclassloop.a $(OBJECTS_LIB_LOOP)
-#objects
+all: libmymat.a connections
+connections: $(OBJECTS_MAIN) libmymat.a
+	$(CC) $(FLAGS) -o progmains $(OBJECTS_MAIN) libmymat.a
+libmymat.a: $(OBJECTS_LIB)
+	$(AR) -rcs libmymat.a $(OBJECTS_LIB)
 my_mat.o: my_mat.c my_mat.h
 	$(CC) $(FLAGS) -c my_mat.c
-
-main.o: main.c my_mat.h  
-	$(CC) $(FLAGS) -c main.c 
+main.o: main.c my_mat.h
+	$(CC) $(FLAGS) -c main.c
 
 .PHONY: clean all
 
 clean:
-	rm -f *.o *.a *.so $(EXE)
+	rm -f *.o *.a *.so progmains
+
