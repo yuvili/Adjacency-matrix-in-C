@@ -7,19 +7,20 @@ int main(){
     int i;
     int j;
     
+    scanf("%c" ,&func);
     while(func != 'D'){
-        scanf("%c" ,&func);
-        
         if(func == 'A'){
             A(mat);
         }
         if(func == 'B'){
             scanf("%d" "%d", &i, &j);
-            return B(mat,i,j);
+            bool x = B(mat,i,j);
+            printf("%s", x ? "true" : "false");
         }
         if(func == 'C'){
             scanf("%d" "%d", &i, &j);
-            return C(mat,i,j);
+            printf("%d",C(mat,i,j));
         }
     }
+    return 0;
 }

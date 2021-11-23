@@ -4,11 +4,12 @@ OBJECTS_MAIN = main.o
 OBJECTS_LIB = my_mat.o
 FLAGS= -Wall -g
 
-all: libmymat.a connections
-connections: $(OBJECTS_MAIN) libmymat.a
-	$(CC) $(FLAGS) -o connections $(OBJECTS_MAIN) libmymat.a
-libmymat.a: $(OBJECTS_LIB)
-	$(AR) -rcs libmymat.a $(OBJECTS_LIB)
+all: libmymat.so connections
+
+connections: $(OBJECTS_MAIN)
+	$(CC) $(FLAGS) -o connections $(OBJECTS_MAIN) ./libmymat.so
+libmymat.so: $(OBJECTS_LIB)
+	$(CC) -shared -o libmymat.so $(OBJECTS_LIB)
 my_mat.o: my_mat.c my_mat.h
 	$(CC) $(FLAGS) -c my_mat.c
 main.o: main.c my_mat.h
