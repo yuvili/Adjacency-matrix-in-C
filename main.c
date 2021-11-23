@@ -8,8 +8,8 @@ int main(){
     int i;
     int j;
     
-    scanf("%c" ,&func);
     while(func != 'D'){
+        scanf("%c" ,&func);
         if(func == 'A'){
             A(mat);
         }
@@ -20,7 +20,8 @@ int main(){
         }
         if(func == 'C'){
             scanf("%d" "%d", &i, &j);
-            printf("%d",C(mat,i,j));
+            int x = C(mat,i,j);
+            printf("%d", x);
         }
     }
 }
