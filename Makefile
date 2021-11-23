@@ -6,7 +6,7 @@ FLAGS= -Wall -g
 
 all: libmymat.a connections
 connections: $(OBJECTS_MAIN) libmymat.a
-	$(CC) $(FLAGS) -o progmains $(OBJECTS_MAIN) libmymat.a
+	$(CC) $(FLAGS) -o connections $(OBJECTS_MAIN) libmymat.a
 libmymat.a: $(OBJECTS_LIB)
 	$(AR) -rcs libmymat.a $(OBJECTS_LIB)
 my_mat.o: my_mat.c my_mat.h
@@ -17,5 +17,5 @@ main.o: main.c my_mat.h
 .PHONY: clean all
 
 clean:
-	rm -f *.o *.a *.so progmains
+	rm -f *.o *.a *.so connections
 

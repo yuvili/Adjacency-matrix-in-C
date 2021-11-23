@@ -1,6 +1,6 @@
 #include <stdbool.h>
 
-void A();
+void A(int[10][10]);
 
 bool B(int, int);
 
