@@ -32,14 +32,14 @@ void A(int mat[10][10]){
         }
     }
 }
-bool B(int i, int j){
+bool B(int mat[10][10], int i, int j){
     if(mat[i][j] == 0){
         return false;
     }
     return true;
 }
 
-int C(int i, int j){
+int C(int mat[10][10], int i, int j){
     if (!B(i,j))
     {
         return -1;

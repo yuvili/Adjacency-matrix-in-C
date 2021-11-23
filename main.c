@@ -15,11 +15,11 @@ int main(){
         }
         if(func == 'B'){
             scanf("%d" "%d", &i, &j);
-            return B(i,j);
+            return B(mat,i,j);
         }
         if(func == 'C'){
             scanf("%d" "%d", &i, &j);
-            return C(i,j);
+            return C(mat,i,j);
         }
     }
 }
