@@ -52,6 +52,7 @@ void B(){
     else{
         printf("true");
     }
+    printf("\n");
 }
 
 int C(){

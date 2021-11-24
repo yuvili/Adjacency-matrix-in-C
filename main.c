@@ -17,6 +17,7 @@ int main(){
         if(func == 'C'){
             int x = C();
             printf("%d", x);
+             printf("\n");
         }
         scanf("%c" ,&func);
     }
