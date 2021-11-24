@@ -4,7 +4,6 @@
 int (*pointer)[10];
 int mat[10][10];
 
-
 void def(){
     pointer = mat;
 }
