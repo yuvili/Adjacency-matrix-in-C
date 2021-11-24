@@ -12,6 +12,7 @@ int main(){
         
         if(func == 'B'){
             B();
+            printf("\n");
         }
         
         if(func == 'C'){
