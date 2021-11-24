@@ -46,10 +46,10 @@ void B(){
     int j;
     scanf("%d" "%d", &i, &j);
     if(pointer[i][j] == 0){
-        printf("false");
+        printf("False");
     }
     else{
-        printf("true");
+        printf("True");
     }
 }
 
