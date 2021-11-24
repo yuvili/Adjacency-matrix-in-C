@@ -1,29 +1,24 @@
 #include <stdio.h>
-#include <stdbool.h>
 #include "my_mat.h"
 
 int main(){
-    int mat[10][10];
     char func;
-    int i;
-    int j;
     
+    scanf("%c" ,&func);
     while(func != 'D'){
-        scanf("%c" ,&func);
         if(func == 'A'){
-            A(mat);
+            A();
         }
+        
         if(func == 'B'){
-            scanf("%d" "%d", &i, &j);
-            bool x = B(mat,i,j);
-            printf("%s", x);
-            printf("\n");
+            B();
         }
+        
         if(func == 'C'){
-            scanf("%d" "%d", &i, &j);
-            int x = C(mat,i,j);
+            int x = C();
             printf("%d", x);
-            printf("\n");
         }
+        scanf("%c" ,&func);
     }
+    return 0;
 }

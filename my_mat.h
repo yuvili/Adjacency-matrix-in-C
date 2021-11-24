@@ -1,6 +1,5 @@
-#include <stdbool.h>
-void A(int[10][10]);
+void A();
 
-bool B(int[10][10], int, int);
+void B();
 
-int C(int[10][10], int, int);
+int C();
