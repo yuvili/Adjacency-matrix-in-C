@@ -15,14 +15,6 @@ void A(int mat[10][10]){
             scanf("%d" , &mat[i][j]);
         }
     }
-     
-     for (int k = 0; k < 10; k++){
-        for (int i = 0; i < 10; i++){
-            for (int j = 0; j < 10; j++){
-                mat[i][j] = min(mat[i][j] , mat[i][k] + mat[k][j]);
-            }
-        }
-    }
 }
 bool B(int mat[10][10], int i, int j){
     if(mat[i][j] == 0){
@@ -32,6 +24,14 @@ bool B(int mat[10][10], int i, int j){
 }
 
 int C(int mat[10][10], int i, int j){
+    for (int k = 0; k < 10; k++){
+        for (int i = 0; i < 10; i++){
+            for (int j = 0; j < 10; j++){
+                mat[i][j] = min(mat[i][j] , mat[i][k] + mat[k][j]);
+            }
+        }
+    }
+    
     if (!B(mat,i,j)){
         return -1;
     }
