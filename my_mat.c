@@ -45,7 +45,6 @@ void B(){
     int i;
     int j;
     scanf("%d" "%d", &i, &j);
-    printf("%d" , pointer[i][j]);
     if(pointer[i][j] == 0){
         printf("false");
     }
